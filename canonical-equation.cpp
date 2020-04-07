@@ -8,8 +8,13 @@
 
 using namespace std;
 
-//EXTERNAL FUNCTIONS ARE DEFFINED ACCORDING WITH PAPER
+//The equations solved here are the ones presented in the paper:
 //The dynamical theory of coevolution: a derivation from stochastic ecological processes, Ulf Dieckmann & Richard Laq
+//You can change the parameter set, some ideas are provided in the paper.
+
+//EXTERNAL FUNCTIONS ARE DEFFINED ACCORDING WITH PAPER
+
+//Intraspecific competence for the preys
 double alpha(double s1)
 {
 	double c7,c8,c9;
@@ -28,7 +33,7 @@ double alpha(double s1)
 
 
 }
-
+//Predation term for the preys
 double beta(double s1, double s2)
 {
 
@@ -53,7 +58,7 @@ double beta(double s1, double s2)
 	return aux*u;
 
 }
-
+//Predation term for the predator (benefit for the predators)
 double gamma(double s1, double s2)
 {
 
