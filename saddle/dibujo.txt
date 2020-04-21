@@ -1,0 +1,34 @@
+reset
+
+ 
+set label at 0.73,0.88 "Coexistence Region" 
+set label at 0.66,0.45 "Zero selection for the predator"
+set label at 0.56,0.09 "Zero selection for the prey"
+set label at 0.56,0.06 "when predator is exticnted"
+set label at 0.2,0.8 "Zero selection for the prey"
+set label at 0.2,0.75 "in the coexistence area"
+
+set label at 0.48,0.60 "1" font ",13"
+set label at 0.63,0.54 "2" font ",13"
+set label at 0.40,0.33 "3" font ",13"
+set label at 0.14,0.47 "saddle" font ",13"
+
+set arrow 1 from 0.73,0.88 to 0.60,0.70
+set arrow 2 from 0.8,0.5 to 0.8,0.70
+set arrow 3 from 0.55,0.09 to 0.5,0.09
+set arrow 4 from 0.32,0.71 to 0.45,0.62
+set arrow 5 from 0.25,0.47 to 0.42,0.48
+
+unset key
+
+set xlabel "r_1" font ",15"
+set ylabel "r_2" font ",15"
+
+set xtics font ",15"
+set ytics font ",15"
+
+plot "coexistencia.txt" lt "." lc "purple", "phi1.txt" lt "-.-" lw 4, "phi2.txt" w l lt "," lc "black", "phi1-part2.txt" w l lt "." lc "blue", "trayectoria1.txt" w l lc "red" lw 2, "trayectoria2.txt" w l lc "green" lw 2, "trayectoria3.txt" w l lc "blue" lw 2, "1.txt" ps 2 pt 3 lc "red", "2.txt" ps 2 pt 3 lc "green", "3.txt" ps 2 pt 3 lc "blue", "saddle.txt" pt 6 ps 2 lw 3 lc "orange"
+
+
+
+
